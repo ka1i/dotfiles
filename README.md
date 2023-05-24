@@ -23,3 +23,7 @@ git submodule foreach git pull origin master
 
 # images收藏
 头像和桌面背景图
+
+# benchmarks
+系统的压力测试结果收集
+1. rpi3

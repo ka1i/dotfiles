@@ -19,3 +19,7 @@ git submodule foreach git pull origin master
 > terminal background image
 > 
 > zsh auto completion files
+
+
+# images收藏
+头像和桌面背景图

@@ -1,0 +1,132 @@
+# Terminal Colors
+## for code in {000..255}; do print -P -- "$code: %F{$code}Color%f"; done
+autoload -Uz colors && colors
+
+
+# color scheme
+## ls
+export CLICOLOR=1
+export LSCOLORS='CxfxcxdxbxegedabagGxGx'
+
+
+# promt style
+HOST_NAME=labs
+PS1="%{%F{255}%}%n%{%f%}@%{%F{039}%}${HOST_NAME}%{%f%} %{%F{008}%}exec: %i/%h current: %j%{%f%} %{%F{093}%}status: %(?.%{%F{135}%}[ ok ]%{%f%}.%{%F{196}%}[oops]%{%f%})%{%f%}
+%{%F{008}%}%y %1~%{%f%} %{%F{092}%}%#%{%f%}⚑ %{%F{141}%}<<<%{%f%} "
+
+
+# git info
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '%F{red}*'   # display this when there are unstaged changes
+zstyle ':vcs_info:*' stagedstr '%F{yellow}+'  # display this when there are staged changes
+zstyle ':vcs_info:*' actionformats \
+    '%F{5}%F{5}[%F{2}%b%F{3}|%F{1}%a%c%u%F{5}]%f '
+zstyle ':vcs_info:*' formats       \
+    '%F{5}%F{5}[%F{2}%b%c%u%F{5}]%f '
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+zstyle ':vcs_info:*' enable git cvs svn
+
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT='${vcs_info_msg_0_}'
+
+
+# shell base setting
+## history
+setopt HIST_BEEP
+export SAVEHIST=5000000
+export HISTSIZE=10000000
+export HISTFILESIZE=15000000
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
+## file
+setopt no_nomatch
+
+
+# zsh completion
+autoload -Uz compinit
+fpath=(/usr/local/share/zsh/site-functions $fpath)
+fpath=(/Volumes/data/dotfiles/zsh/completion $fpath)
+compinit
+## k8s
+source <(kubectl completion zsh)
+
+## fix brew
+#export HOMEBREW_NO_INSTALL_FROM_API=1
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+
+# plugins
+source "/Volumes/data/dotfiles/zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh"
+source "/Volumes/data/dotfiles/zsh/plugins/ohmyzsh/plugins/macos/macos.plugin.zsh"
+source "/Volumes/data/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "/Volumes/data/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+
+# shell or terminal env
+export GPG_TTY=$(tty)
+export LC_ALL=en_US.UTF-8
+
+## >>> docker remote host
+export DOCKER_HOST=ssh://root@192.168.6.5:23301
+alias docker=/Volumes/data/env/applications/docker/docker
+export PATH=/Volumes/data/env/applications/docker/cli-plugins:${PATH}
+
+
+# user wide env
+## brew
+export PATH="/usr/local/sbin:$PATH"
+## Golang
+export GOPROXY=https://goproxy.io,direct
+export GOROOT=/Volumes/data/env/toolchain/golang/go
+export GOPATH=/Volumes/data/env/toolchain/golang/res
+export PATH=${GOROOT}/bin:${GOPATH}/bin:${PATH}
+## Node.js
+export NODE_HOME=/Volumes/data/env/toolchain/nodejs/node-v18.13.0-darwin-x64
+export PATH=${NODE_HOME}/bin:${PATH}
+## Java
+export JAVA_HOME=$(/usr/libexec/java_home -V 2>&1 | grep "SE" | awk '{print $NF}')
+export PATH=/Volumes/data/env/toolchain/java/apache-maven-3.8.7/bin:${PATH}
+## ninja build system
+export PATH=/Volumes/data/env/toolchain/ninja/bin:${PATH}
+## tools
+export VULKAN_SDK_PATH=/Volumes/data/env/applications/VulkanSDK/1.3.236.0
+export VK_ICD_FILENAMES=${VULKAN_SDK_PATH}/macOS/share/vulkan/icd.d/MoltenVK_icd.json
+
+# -------
+# alias
+# -------
+alias cls='clear'
+alias tree='tree -N'
+alias git='LANG=en_US git'
+alias open_command='open'
+alias json='python -c "import sys, json; print(json.dumps(json.load(sys.stdin),indent=2))"'
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Volumes/data/env/applications/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Volumes/data/env/applications/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Volumes/data/env/applications/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Volumes/data/env/applications/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

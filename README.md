@@ -27,3 +27,6 @@ git submodule foreach git pull origin master
 # benchmarks
 系统的压力测试结果收集
 1. rpi3
+2. rpi4
+3. nuc8i7hvk
+4. e5 2683v4

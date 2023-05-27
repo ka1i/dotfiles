@@ -1,0 +1,138 @@
+   BYTE UNIX Benchmarks (Version 5.1.3)
+
+   System: pve: GNU/Linux
+   OS: GNU/Linux -- 5.15.107-1-pve -- #1 SMP PVE 5.15.107-1 (2023-04-20T10:05Z)
+   Machine: x86_64 (unknown)
+   Language: en_US.utf8 (charmap="UTF-8", collate="UTF-8")
+   CPU 0: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 1: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 2: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 3: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 4: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 5: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 6: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 7: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 8: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 9: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 10: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 11: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 12: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 13: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 14: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 15: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 16: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 17: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 18: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 19: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 20: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 21: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 22: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 23: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 24: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 25: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 26: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 27: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 28: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 29: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 30: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   CPU 31: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz (4200.1 bogomips)
+          Hyper-Threading, x86-64, MMX, Physical Address Ext, SYSENTER/SYSEXIT, SYSCALL/SYSRET, Intel virtualization
+   22:52:43 up  1:45,  1 user,  load average: 0.45, 0.44, 0.45; runlevel 2023-05-27
+
+------------------------------------------------------------------------
+Benchmark Run: Sat May 27 2023 22:52:43 - 23:20:44
+32 CPUs in system; running 1 parallel copy of tests
+
+Dhrystone 2 using register variables       37265979.1 lps   (10.0 s, 7 samples)
+Double-Precision Whetstone                     6485.2 MWIPS (10.0 s, 7 samples)
+Execl Throughput                               4205.9 lps   (30.0 s, 2 samples)
+File Copy 1024 bufsize 2000 maxblocks        758414.0 KBps  (30.0 s, 2 samples)
+File Copy 256 bufsize 500 maxblocks          197926.6 KBps  (30.0 s, 2 samples)
+File Copy 4096 bufsize 8000 maxblocks       2496752.4 KBps  (30.0 s, 2 samples)
+Pipe Throughput                             1197227.3 lps   (10.0 s, 7 samples)
+Pipe-based Context Switching                 173608.2 lps   (10.0 s, 7 samples)
+Process Creation                               6606.1 lps   (30.0 s, 2 samples)
+Shell Scripts (1 concurrent)                   9537.3 lpm   (60.0 s, 2 samples)
+Shell Scripts (8 concurrent)                   8070.9 lpm   (60.0 s, 2 samples)
+System Call Overhead                         810023.3 lps   (10.0 s, 7 samples)
+
+System Benchmarks Index Values               BASELINE       RESULT    INDEX
+Dhrystone 2 using register variables         116700.0   37265979.1   3193.3
+Double-Precision Whetstone                       55.0       6485.2   1179.1
+Execl Throughput                                 43.0       4205.9    978.1
+File Copy 1024 bufsize 2000 maxblocks          3960.0     758414.0   1915.2
+File Copy 256 bufsize 500 maxblocks            1655.0     197926.6   1195.9
+File Copy 4096 bufsize 8000 maxblocks          5800.0    2496752.4   4304.7
+Pipe Throughput                               12440.0    1197227.3    962.4
+Pipe-based Context Switching                   4000.0     173608.2    434.0
+Process Creation                                126.0       6606.1    524.3
+Shell Scripts (1 concurrent)                     42.4       9537.3   2249.4
+Shell Scripts (8 concurrent)                      6.0       8070.9  13451.5
+System Call Overhead                          15000.0     810023.3    540.0
+                                                                   ========
+System Benchmarks Index Score                                        1500.2
+
+------------------------------------------------------------------------
+Benchmark Run: Sat May 27 2023 23:20:44 - 23:48:53
+32 CPUs in system; running 32 parallel copies of tests
+
+Dhrystone 2 using register variables      671694801.7 lps   (10.0 s, 7 samples)
+Double-Precision Whetstone                   155637.5 MWIPS (10.0 s, 7 samples)
+Execl Throughput                              58874.6 lps   (30.0 s, 2 samples)
+File Copy 1024 bufsize 2000 maxblocks      12815184.3 KBps  (30.0 s, 2 samples)
+File Copy 256 bufsize 500 maxblocks         3581959.4 KBps  (30.0 s, 2 samples)
+File Copy 4096 bufsize 8000 maxblocks      23203808.2 KBps  (30.0 s, 2 samples)
+Pipe Throughput                            22940971.6 lps   (10.0 s, 7 samples)
+Pipe-based Context Switching                2275188.1 lps   (10.0 s, 7 samples)
+Process Creation                             123796.5 lps   (30.0 s, 2 samples)
+Shell Scripts (1 concurrent)                 129602.7 lpm   (60.0 s, 2 samples)
+Shell Scripts (8 concurrent)                  15170.9 lpm   (60.0 s, 2 samples)
+System Call Overhead                       17946817.2 lps   (10.0 s, 7 samples)
+
+System Benchmarks Index Values               BASELINE       RESULT    INDEX
+Dhrystone 2 using register variables         116700.0  671694801.7  57557.4
+Double-Precision Whetstone                       55.0     155637.5  28297.7
+Execl Throughput                                 43.0      58874.6  13691.8
+File Copy 1024 bufsize 2000 maxblocks          3960.0   12815184.3  32361.6
+File Copy 256 bufsize 500 maxblocks            1655.0    3581959.4  21643.3
+File Copy 4096 bufsize 8000 maxblocks          5800.0   23203808.2  40006.6
+Pipe Throughput                               12440.0   22940971.6  18441.3
+Pipe-based Context Switching                   4000.0    2275188.1   5688.0
+Process Creation                                126.0     123796.5   9825.1
+Shell Scripts (1 concurrent)                     42.4     129602.7  30566.7
+Shell Scripts (8 concurrent)                      6.0      15170.9  25284.8
+System Call Overhead                          15000.0   17946817.2  11964.5
+                                                                   ========
+System Benchmarks Index Score                                       20633.5
+

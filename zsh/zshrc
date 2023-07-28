@@ -89,7 +89,7 @@ export PATH=/Volumes/data/env/applications/docker/cli-plugins:${PATH}
 ## brew
 export PATH="/usr/local/sbin:$PATH"
 ## Golang
-export GOPROXY=https://goproxy.io,direct
+export GOPROXY=https://proxy.golang.com.cn,direct
 export GOROOT=/Volumes/data/env/toolchain/golang/go
 export GOPATH=/Volumes/data/env/toolchain/golang/res
 export PATH=${GOROOT}/bin:${GOPATH}/bin:${PATH}

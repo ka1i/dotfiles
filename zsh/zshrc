@@ -94,7 +94,7 @@ export GOROOT=/Volumes/data/env/toolchain/golang/go
 export GOPATH=/Volumes/data/env/toolchain/golang/res
 export PATH=${GOROOT}/bin:${GOPATH}/bin:${PATH}
 ## Node.js
-export NODE_HOME=/Volumes/data/env/toolchain/nodejs/node-v18.13.0-darwin-x64
+export NODE_HOME=/Volumes/data/env/toolchain/nodejs/node-v18.18.2-darwin-x64
 export PATH=${NODE_HOME}/bin:${PATH}
 ## Java
 export JAVA_HOME=$(/usr/libexec/java_home -V 2>&1 | grep "SE" | awk '{print $NF}')

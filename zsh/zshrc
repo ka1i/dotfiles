@@ -36,9 +36,9 @@ RPROMPT='${vcs_info_msg_0_}'
 # shell base setting
 ## history
 setopt HIST_BEEP
-export SAVEHIST=5000000
-export HISTSIZE=10000000
-export HISTFILESIZE=15000000
+export SAVEHIST=9000000000
+export HISTSIZE=9900000000
+export HISTFILESIZE=9000000000
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
@@ -60,11 +60,11 @@ autoload -Uz compinit
 fpath=(/usr/local/share/zsh/site-functions $fpath)
 fpath=(/Volumes/data/dotfiles/zsh/completion $fpath)
 compinit
+
 ## k8s
 source <(kubectl completion zsh)
 
 ## fix brew
-#export HOMEBREW_NO_INSTALL_FROM_API=1
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 
@@ -80,7 +80,7 @@ export GPG_TTY=$(tty)
 export LC_ALL=en_US.UTF-8
 
 ## >>> docker remote host
-export DOCKER_HOST=ssh://root@192.168.6.5:23301
+export DOCKER_HOST=ssh://root@192.168.6.7:22
 alias docker=/Volumes/data/env/applications/docker/docker
 export PATH=/Volumes/data/env/applications/docker/cli-plugins:${PATH}
 
@@ -94,7 +94,7 @@ export GOROOT=/Volumes/data/env/toolchain/golang/go
 export GOPATH=/Volumes/data/env/toolchain/golang/res
 export PATH=${GOROOT}/bin:${GOPATH}/bin:${PATH}
 ## Node.js
-export NODE_HOME=/Volumes/data/env/toolchain/nodejs/node-v18.18.2-darwin-x64
+export NODE_HOME=/Volumes/data/env/toolchain/nodejs/node-v20.9.0-darwin-x64
 export PATH=${NODE_HOME}/bin:${PATH}
 ## Java
 export JAVA_HOME=$(/usr/libexec/java_home -V 2>&1 | grep "SE" | awk '{print $NF}')

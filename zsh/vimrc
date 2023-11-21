@@ -1,0 +1,14 @@
+syntax on       "
+set number      "
+set cindent     "
+set smartindent "
+set showmatch   "
+set ruler       "开启状态行
+
+set tabstop=4   "缩进限制
+set cursorline  "高亮当前行
+set autoindent  "自动缩进
+
+set expandtab       "用空格显示缩进
+set shiftwidth=4    "缩进长度，与softtabstop保持一致
+set softtabstop=4   "回退时的缩进长度

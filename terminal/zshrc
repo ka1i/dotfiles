@@ -5,7 +5,7 @@ autoload -Uz colors && colors
 
 # color scheme
 ## ls
-export CLICOLOR=1
+export CLICOLOR=yes
 export LSCOLORS='CxfxcxdxbxegedabagGxGx'
 
 
@@ -58,21 +58,21 @@ setopt no_nomatch
 # zsh completion
 autoload -Uz compinit
 fpath=(/usr/local/share/zsh/site-functions $fpath)
-fpath=(/Volumes/data/dotfiles/zsh/completion $fpath)
+fpath=(/Users/mardan/tools/dotfiles/terminal/completion $fpath)
 compinit
 
 ## k8s
-source <(kubectl completion zsh)
+source <(/opt/homebrew/bin/kubectl completion zsh)
 
 ## fix brew
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 
 # plugins
-source "/Volumes/data/dotfiles/zsh/plugins/ohmyzsh/plugins/git/git.plugin.zsh"
-source "/Volumes/data/dotfiles/zsh/plugins/ohmyzsh/plugins/macos/macos.plugin.zsh"
-source "/Volumes/data/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "/Volumes/data/dotfiles/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "/Users/mardan/tools/dotfiles/terminal/plugins/ohmyzsh/plugins/git/git.plugin.zsh"
+source "/Users/mardan/tools/dotfiles/terminal/plugins/ohmyzsh/plugins/macos/macos.plugin.zsh"
+source "/Users/mardan/tools/dotfiles/terminal/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "/Users/mardan/tools/dotfiles/terminal/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 
 # shell or terminal env
@@ -81,29 +81,32 @@ export LC_ALL=en_US.UTF-8
 
 ## >>> docker remote host
 export DOCKER_HOST=ssh://root@192.168.6.7:22
-alias docker=/Volumes/data/env/applications/docker/docker
-export PATH=/Volumes/data/env/applications/docker/cli-plugins:${PATH}
-
+alias docker=/Users/mardan/tools/3rd/docker/docker
 
 # user wide env
 ## brew
-export PATH="/usr/local/sbin:$PATH"
+if [ "$(arch)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
+
 ## Golang
 export GOPROXY=https://proxy.golang.com.cn,direct
-export GOROOT=/Volumes/data/env/toolchain/golang/go
-export GOPATH=/Volumes/data/env/toolchain/golang/res
-export PATH=${GOROOT}/bin:${GOPATH}/bin:${PATH}
+export GOPATH=/Users/mardan/tools/toolchain/golang
+export PATH=${PATH}:${GOPATH}/bin
 ## Node.js
-export NODE_HOME=/Volumes/data/env/toolchain/nodejs/node-v20.9.0-darwin-x64
-export PATH=${NODE_HOME}/bin:${PATH}
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 ## Java
 export JAVA_HOME=$(/usr/libexec/java_home -V 2>&1 | grep "SE" | awk '{print $NF}')
-export PATH=/Volumes/data/env/toolchain/java/apache-maven-3.8.7/bin:${PATH}
-## ninja build system
-export PATH=/Volumes/data/env/toolchain/ninja/bin:${PATH}
-## tools
-export VULKAN_SDK_PATH=/Volumes/data/env/applications/VulkanSDK/1.3.236.0
-export VK_ICD_FILENAMES=${VULKAN_SDK_PATH}/macOS/share/vulkan/icd.d/MoltenVK_icd.json
+export PATH=/Users/mardan/tools/toolchain/java/apache-maven-3.9.5/bin:${PATH}
+# flutter
+export FLUTTER_HOME=/Users/mardan/tools/toolchain/flutter
+export PATH=${FLUTTER_HOME}/bin:${PATH}
+export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
+export FLUTTER_STORAGE_BASE_URL="https://mirrors.tuna.tsinghua.edu.cn/flutter"
 
 # -------
 # alias
@@ -113,18 +116,19 @@ alias tree='tree -N'
 alias git='LANG=en_US git'
 alias open_command='open'
 alias json='python -c "import sys, json; print(json.dumps(json.load(sys.stdin),indent=2))"'
-
+alias sd='cd /Volumes/data/AI/sd && conda activate sd'
+alias glm='cd /Volumes/data/AI/glm && conda activate glm'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Volumes/data/env/applications/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Volumes/data/env/applications/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Volumes/data/env/applications/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
     else
-        export PATH="/Volumes/data/env/applications/miniconda3/bin:$PATH"
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
     fi
 fi
 unset __conda_setup

@@ -1,9 +1,9 @@
-[submodule "zsh/plugins/ohmyzsh"]
-	path = zsh/plugins/ohmyzsh
+[submodule "terminal/plugins/ohmyzsh"]
+	path = terminal/plugins/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
-[submodule "zsh/plugins/zsh-autosuggestions"]
-	path = zsh/plugins/zsh-autosuggestions
+[submodule "terminal/plugins/zsh-autosuggestions"]
+	path = terminal/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
-[submodule "zsh/plugins/zsh-syntax-highlighting"]
-	path = zsh/plugins/zsh-syntax-highlighting
+[submodule "terminal/plugins/zsh-syntax-highlighting"]
+	path = terminal/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
